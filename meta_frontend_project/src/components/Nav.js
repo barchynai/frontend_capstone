@@ -1,20 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
+
 import headerLogo from '../images/header_logo.png'
-function Nav() {
+function Nav (){
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () =>{
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <header className="header-container">
+    <nav className="nav-bar">
       <img src={headerLogo} alt="Logo" className="header-logo" />
-      <nav>
-        <ul className="nav-list">
-          <li className="nav-item"><a href="#home">Home</a></li>
-          <li className="nav-item"><a href="#about">About</a></li>
-          <li className="nav-item"><a href="#services">Menu</a></li>
-          <li className="nav-item"><a href="#contact">Reservation</a></li>
-          <li className="nav-item"><a href="#contact">Order Online</a></li>
-          <li className="nav-item"><a href="#contact">Login</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div className={`nav-links ${isOpen ? 'open' : ''}`}>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Menu</a>
+        <a href="#contact">Reservation</a>
+        <a href="#contact">Order Online</a>
+        <a href="#contact">Login</a>
+      </div>
+
+        {/* humberger icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+      <span></span>
+      <span></span>
+      <span></span>
+      </div>
+    </nav>
   );
 }
 export default Nav;
