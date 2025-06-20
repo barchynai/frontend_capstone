@@ -360,3 +360,21 @@ section {
     left: 40px;
   }
 }
+.footer-container{
+  display : flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5% 15%;
+}
+.footer-logo {
+ width: 20%;
+}
+.footer-container h4{
+padding-bottom: 0;
+text-align: center;
+}
+.footer-container ul li{
+  list-style: none;
+  padding: 5px 0;
+}
