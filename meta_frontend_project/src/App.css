@@ -124,8 +124,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 80px 80px;
+  padding: 5% 15%;
 }
 .specials-header h2 {
   font-size: 36px;
@@ -197,6 +196,7 @@ section {
   display: flex;
   flex-direction: column;
   transition: transform 0.2s;
+  padding-bottom: 20px;
 }
 
 .menu-item:hover {
@@ -212,28 +212,30 @@ section {
 .menu-item h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 1rem 1rem 0 1rem;
   display: flex;
-
+  padding: 0 25px;
 }
 
 .menu-item-price {
   color: #ff5733;
   font-weight: bold;
   font-size: 1rem;
-;
+  text-align: right;
+  margin-top: -40px;
+  margin-right: 25px;
 }
 
 .menu-item p {
   font-size: 0.95rem;
   color: #555;
   margin: 0.5rem 1rem 1rem 1rem;
+  padding: 20px 10px 0 10px;
 }
 
 .menu-item span.delivery {
   display: block;
-  margin: 0 1rem 1rem 1rem;
   font-weight: bold;
+  padding: 0 20px 10px 25px;
 }
 
 .menu-item span.delivery::after {
@@ -413,4 +415,36 @@ text-align: center;
 .footer-container ul li{
   list-style: none;
   padding: 5px 0;
+}
+.reservation-form{
+  padding: 40px 60px;
+  border: solid var(--green);
+  border-radius: 18px;
+  margin: 5% auto;
+  width: 400px;
+}
+.reservation-form input{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  border: solid 0.5px var(--green);
+  background-color: rgba(13, 134, 13, 0.086);
+}
+.reservation-form label{
+  font-size: larger;
+  font-weight: 600;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: var(--green);
+}
+.reservation-form button{
+  background-color: var(--yellow);
+  padding: 15px;
+  width: 100%;
+  border: solid 0.7px black;
+  border-radius: 18px;
+  font-size: medium;
+  font-weight: 600;
 }
