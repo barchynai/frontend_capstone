@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BookingPage.css';
 
 const BookingPage = () => {
@@ -10,6 +11,7 @@ const BookingPage = () => {
     guests: 1,
     occasion: ''
   });
+  const navigate = useNavigate();
 
   const [errors, setErrors] = useState({});
 
@@ -35,8 +37,7 @@ const BookingPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      alert('Reservation created successfully!');
-      // Send to backend or API here
+      navigate('/confirmation', { state: formData });
     }
   };
 

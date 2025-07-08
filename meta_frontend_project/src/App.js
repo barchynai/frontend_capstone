@@ -8,6 +8,7 @@ import Specials from './components/Specials';
 import Chicago from './components/Chicago';
 import BookingPage from './components/BookingPage';
 import CallToAction from './components/CallToAction';
+import ConfirmationPage from './components/ConfirmationPage';
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Routes>
       <Route path='/' element={<Homepage/>}/>
       <Route path='/reservation' element={<BookingPage/>}/>
+      <Route path='/confirmation' element={<ConfirmationPage />} />
       <Route path='/about' element={<Chicago/>}/>
       <Route path='/menu' element={<Specials/>}/>
       </Routes>
